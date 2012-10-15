@@ -41,6 +41,7 @@ requires 'perl' => '5.008001';
 requires 'SQL::Translator' => '0.11016';
 requires 'DBI';
 requires 'Git::Repository';
+requires 'File::Path' =>'2.07';
 
 author_tests 'xt';
 auto_set_repository;
