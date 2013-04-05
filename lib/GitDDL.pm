@@ -2,7 +2,7 @@ package GitDDL;
 use strict;
 use warnings;
 
-use Any::Moose;
+use Mouse;
 
 our $VERSION = '0.02';
 
@@ -47,7 +47,7 @@ has _git => (
     builder => '_build_git',
 );
 
-no Any::Moose;
+no Mouse;
 
 sub check_version {
     my ($self) = @_;
