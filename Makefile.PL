@@ -42,6 +42,7 @@ requires 'SQL::Translator' => '0.11016';
 requires 'DBI';
 requires 'Git::Repository';
 requires 'File::Path' =>'2.07';
+requires 'Mouse';
 
 author_tests 'xt';
 auto_set_repository;
