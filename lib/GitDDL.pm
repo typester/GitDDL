@@ -120,7 +120,7 @@ sub diff {
         :                      do { my ($d) = $dsn0 =~ /dbi:(.*?):/; $d };
 
     my $tmp_fh = File::Temp->new;
-    $self->_dump_sql_for_specified_coomit($self->database_version, $tmp_fh->filename);
+    $self->_dump_sql_for_specified_commit($self->database_version, $tmp_fh->filename);
 
     my $source = SQL::Translator->new;
     $source->parser($db) or croak $source->error;
@@ -203,7 +203,7 @@ sub _slurp {
     $data;
 }
 
-sub _dump_sql_for_specified_coomit {
+sub _dump_sql_for_specified_commit {
     my ($self, $commit_hash, $outfile) = @_;
 
     my ($mode, $type, $blob_hash) = split /\s+/, scalar $self->_git->run(
