@@ -61,6 +61,11 @@ METHODS
         database table name that contains its git commit version. (default:
         git_ddl_version)
 
+    *   sql_filter => 'CodeRef' (optional)
+
+        CodeRef for filtering sql content. It is invoked only in "diff()"
+        method. (default: do nothing)
+
   check_version()
         $gd->check_version();
 

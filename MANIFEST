@@ -19,6 +19,7 @@ MYMETA.json
 MYMETA.yml
 README
 t/basic.t
+t/sql_filter.t
 xt/pod.t
 xt/pod_coverage.t
 xt/pod_spell.t
