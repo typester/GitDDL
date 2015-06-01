@@ -48,7 +48,7 @@ has _dbh => (
 );
 
 has _git => (
-    is      => 'rw',,
+    is      => 'rw',
     lazy    => 1,
     builder => '_build_git',
 );
