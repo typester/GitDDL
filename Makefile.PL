@@ -39,6 +39,7 @@ test_requires 'Test::Git';
 
 requires 'perl' => '5.008001';
 requires 'SQL::Translator' => '0.11016';
+requires 'SQL::SplitStatement';
 requires 'DBI';
 requires 'Git::Repository';
 requires 'File::Path' =>'2.07';

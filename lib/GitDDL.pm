@@ -13,6 +13,7 @@ use File::Temp;
 use Git::Repository;
 use SQL::Translator;
 use SQL::Translator::Diff;
+use SQL::SplitStatement;
 use Try::Tiny;
 
 has work_tree => (
@@ -200,7 +201,9 @@ sub _build_sql_filter {
 sub _do_sql {
     my ($self, $sql) = @_;
 
-    my @statements = map { "$_;" } grep { /\S+/ } split ';', $sql;
+    my $sql_splitter = SQL::SplitStatement->new;
+
+    my @statements = map { "$_;" } $sql_splitter->split($sql);
     for my $statement (@statements) {
         $self->_dbh->do($statement)
             or croak $self->_dbh->errstr;
