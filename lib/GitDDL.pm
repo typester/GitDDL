@@ -246,19 +246,19 @@ GitDDL - database migration utility for git managed sql
         ddl_file  => 'sql/schema_ddl.sql',
         dsn       => ['dbi:mysql:my_project', 'root', ''],
     );
-    
+
     # checking whether the database version matchs ddl_file version or not.
     $gd->check_version;
-    
+
     # getting database version
     my $db_version = $gd->database_version;
-    
+
     # getting ddl version
     my $ddl_version = $gd->ddl_version;
-    
+
     # upgrade database
     $gd->upgrade_database;
-    
+
     # deploy ddl
     $gd->deploy;
 
@@ -334,7 +334,7 @@ This method is useful for dry-run checking before upgrade_database.
 
 =head2 upgrade_database()
 
-Upgrade database schema to latest ddl schema. 
+Upgrade database schema to latest ddl schema.
 
 =head1 AUTHOR
 
