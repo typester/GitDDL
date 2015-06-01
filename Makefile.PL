@@ -4,6 +4,7 @@ use warnings;
 BEGIN {
     my @devmods = qw(
         Module::Install::AuthorTests
+        Module::Install::Bugtracker
         Module::Install::ReadmeFromPod
         Module::Install::Repository
     );
@@ -46,5 +47,7 @@ requires 'Mouse';
 
 author_tests 'xt';
 auto_set_repository;
+
+resources bugtracker => 'https://github.com/typester/GitDDL/issues';
 
 WriteAll;
