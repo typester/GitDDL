@@ -7,19 +7,19 @@ SYNOPSIS
             ddl_file  => 'sql/schema_ddl.sql',
             dsn       => ['dbi:mysql:my_project', 'root', ''],
         );
-    
+
         # checking whether the database version matchs ddl_file version or not.
         $gd->check_version;
-    
+
         # getting database version
         my $db_version = $gd->database_version;
-    
+
         # getting ddl version
         my $ddl_version = $gd->ddl_version;
-    
+
         # upgrade database
         $gd->upgrade_database;
-    
+
         # deploy ddl
         $gd->deploy;
 
@@ -103,4 +103,3 @@ COPYRIGHT AND LICENSE
 
     The full text of the license can be found in the LICENSE file included
     with this module.
-

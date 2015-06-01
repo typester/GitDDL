@@ -71,4 +71,3 @@ $gd->sql_filter(sub {
 like $gd->diff, qr/CREATE TABLE second/, 'diff looks ok';
 
 done_testing;
-
