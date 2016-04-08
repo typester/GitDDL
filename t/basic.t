@@ -2,6 +2,7 @@ use strict;
 use warnings;
 use Test::More;
 use Test::Git;
+use Test::Requires::Git;
 
 use File::Spec;
 use File::Path 'make_path';
@@ -12,7 +13,7 @@ if ($@) {
     plan skip_all => 'DBD::SQLite is required to run this test';
 }
 
-has_git;
+test_requires_git;
 
 use_ok 'GitDDL';
 

@@ -36,6 +36,7 @@ readme_from 'lib/GitDDL.pm';
 
 test_requires 'Test::More' => '0.86';
 test_requires 'Test::Git';
+test_requires 'Test::Requires::Git' => '1.005';
 
 requires 'perl' => '5.008001';
 requires 'SQL::Translator' => '0.11016';
