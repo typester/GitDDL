@@ -3,6 +3,7 @@ use warnings;
 
 use Test::More;
 use Test::Git;
+use Test::Requires::Git;
 
 use File::Path 'make_path';
 use GitDDL;
