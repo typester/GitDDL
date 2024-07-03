@@ -36,6 +36,11 @@ has sql_filter => (
     builder => '_build_sql_filter',
 );
 
+has sqlt_args => (
+    is      => 'rw',
+    default => sub { +{} },
+);
+
 has version_table => (
     is      => 'rw',
     default => 'git_ddl_version',
@@ -144,6 +149,7 @@ sub diff {
         output_db     => $db,
         source_schema => $source->schema,
         target_schema => $target->schema,
+        sqlt_args     => $self->sqlt_args,
     })->compute_differences->produce_diff_sql;
 
     # ignore first line
